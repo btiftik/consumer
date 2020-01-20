@@ -30,6 +30,8 @@ public class ConsumerConfig {
         activeMQConnectionFactory.setBrokerURL(brokerUrl);
         activeMQConnectionFactory.setTrustAllPackages(true);
         activeMQConnectionFactory.setExclusiveConsumer(true);
+        activeMQConnectionFactory.setConnectResponseTimeout(3000);
+
 
         return activeMQConnectionFactory;
     }
