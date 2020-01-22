@@ -31,7 +31,7 @@ public class Consumer {
         Assert.notNull(messageHeaders, HEADER_ERROR_MESSAGE);
         Assert.notNull(messageHeaders.getTimestamp(), HEADER_ERROR_MESSAGE);
         Assert.notNull(messageHeaders.getId(), HEADER_ERROR_MESSAGE);
-
+        data.setTimeStamp(messageHeaders.getTimestamp());
         dataWriter.write(data/*, messageHeaders.getTimestamp(), messageHeaders.getId().toString()*/);
 
 
